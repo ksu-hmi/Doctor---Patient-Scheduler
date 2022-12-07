@@ -76,3 +76,4 @@ while(True):
     a = reference.schedule_time(dc,sp,fn,ln,age,date)
     print ("Here is your record")
     print (a)
+    break
