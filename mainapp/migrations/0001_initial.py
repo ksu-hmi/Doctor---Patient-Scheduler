@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('date', models.DateField()),
                 ('timeslot', models.IntegerField(choices=[(0, '09:00 – 10:00'), (1, '10:00 – 11:00'), (2, '11:00 – 12:00'), (3, '12:00 – 13:00'), (4, '13:00 – 14:00'), (5, '14:00 – 15:00'), (6, '15:00 – 16:00'), (7, '16:00 – 17:00'), (8, '17:00 – 18:00')])),
-                ('patient_name', models.CharField(max_length=60)),
+                ('patient_name', models.CharField(max_length=50)),
                 ('doctor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='mainapp.doctor')),
             ],
             options={
