@@ -20,7 +20,7 @@ class Appointment(models.Model):
     )
 
     doctor = models.ForeignKey('Doctor',on_delete = models.CASCADE)
-    date = models.DateField(help_text="YYYY-MM-DD")
+    date = models.DateField(help_text="MM-DD-YYYY") #edit date format code
     timeslot = models.IntegerField(choices=TIMESLOT_LIST)
     patient_name = models.CharField(max_length=60)
 
@@ -45,4 +45,4 @@ class Doctor(models.Model):
 
     @property
     def short_name(self):
-        return '{} {}.{}.'.format(self.last_name.title(), self.first_name[0].upper(), self.middle_name[0].upper())
+        return '{} {}.{}.'.format(self.last_name.title(), self.first_name[0].upper(), self.middle_name[0].upper()) #edit first name & middle name
